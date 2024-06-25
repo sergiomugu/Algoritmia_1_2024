@@ -1,0 +1,9 @@
+# Ignorar archivos temporales
+*.tmp
+
+# Ignorar archivos de respaldo de Emacs
+*~
+
+# Ignorar archivos log
+*.log
+desḱtop.ini
