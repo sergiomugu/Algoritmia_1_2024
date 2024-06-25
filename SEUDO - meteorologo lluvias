@@ -1,0 +1,44 @@
+
+Algoritmo ejercicioMeteorologico
+	
+	lexico
+		mesMaximaLluvia, mesMinimaLluvia, milimetrosMaximo E Z
+		milimetrosMinimo, milimetrosMensualActual,contadorMes E Z
+	
+	inicio
+	
+	mesMinimaLluvia = 0 // el mes donde menos llovio
+	mesMaximaLluvia = 0 // el mes donde mas llovio
+	
+	milimetrosMinimo = 99999 // cantidad de milimetros del mes que menos llovio
+	milimetrosMaximo = -1 // cantidad de milimitros del mes que mas llovio
+	
+	contadorMes = 0 // de 1 a 12 ire avanzando
+	milimetrosMensualActual = -1 // milimetros del mes corriente (contadorMes)
+		
+	Repetir
+	
+		contadorMes <- contadorMes + 1 // el numero del mes corriente 
+		
+		mje<-- "Ingresar la cantidad de milimetros del mes ",contadorMes
+		salida: mje
+		entrada: milimetrosMensualActual		
+
+				
+		si(milimetrosMensualActual < milimetrosMinimo)//Actualizar datos del minimo
+			milimetrosMinimo <- milimetrosMensualActual
+			mesMinimaLluvia <- contadorMes
+		FSi
+
+		
+		si(milimetrosMensualActual > milimetrosMaximo)//Actualizar datos del maximo
+			milimetrosMaximo <- milimetrosMensualActual
+			mesMaximaLluvia <- contadorMes
+		FSi
+				
+	Hasta Que contadorMes > 11
+	
+	salida: "El mes donde menos llovio es el ", mesMinimaLluvia, " y llovio ", milimetrosMinimo, "mm"
+	salida: "El mes donde mas llovio es el ", mesMaximaLluvia, " y llovio ", milimetrosMaximo, "mm"
+	
+Fin

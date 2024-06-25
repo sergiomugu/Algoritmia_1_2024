@@ -1,0 +1,66 @@
+
+
+Algoritmo Fibonacci
+
+lexico
+	n E N
+	f1, f2, res, E Z //res es el fibonacci en la posicion n
+	i E N
+	serie E cadena
+	
+inicio
+	entrada: n //posicion de la serie
+	segun 
+		n=1 : serie <-- "0"  res <--0
+		n=2 : serie <-- "0,1" res <--1
+		n>2 : serie <-- "0,1," 
+			  f1 <-- 0
+			  f2 <-- 1
+			  i <-- 2
+			  repetir
+				res <-- f1+f2
+				serie <-- serie+res
+				f1 <-- f2
+				f2 <-- res
+				i <-- i+1
+			  hasta que i=n
+	fsegun
+	salida: res serie
+fin
+	
+/*
+	n  ciclo   f1  f2   res    i       serie
+               0   1           2    
+	3   1      0   1     1     3      0,1,1
+	4   2      1   1     2     4      0,1,1,2
+	5   3      1   2     3     5      0,1,1,2,3
+	6   4      2   3     5     6      0,1,1,2,3,5 
+	7   5      3   5     8     7      0,1,1,2,3,5,8
+	
+*/	
+
+
+con si/entonces
+
+	si n = 1 entonces
+		serie <-- "0"
+		res <-- 0
+	sino 
+		si n = 2 entonces
+			serie <-- "0,1"
+			res <-- 1
+		
+			sino
+				serie <-- "0,1,"
+				f1 <-- 0
+				f2 <-- 1
+				i <-- 2
+				repetir
+					res <-- f1 + f2
+					serie <-- serie+res
+					f1 <-- f2
+					f2 <-- res
+					i <-- i + 1
+				hasta que i = n
+		fin si	
+	fin si
