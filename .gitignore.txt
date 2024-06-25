@@ -1,0 +1,13 @@
+# Ignorar archivos temporales sergio.
+*.tmp
+
+# Ignorar archivos de respaldo de Emacs
+*~
+
+# Ignorar archivos log
+*.log
+*.ini
+desktop.ini
+refs/desktop.ini
+refs/heads/desktop.ini
+refs/tags/desktop.ini
