@@ -133,4 +133,5 @@ int main() {
 /*
 PRUEBAS
 subir a github
+se realizo push --force
 */
